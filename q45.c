@@ -17,17 +17,14 @@ Approximate sum: 2.22
 
 int main() {
     int n, i;
-    float sum = 0.0;
-    int numerator = 2;
-    int denominator = 3;
+    float sum = 0.0, term;
 
-    printf("enter the number:");
+    printf("Enter the number of terms (n): ");
     scanf("%d", &n);
 
-    for (i = 0; i < n; i++) {
-        sum += (float)numerator / denominator;
-        numerator += 2;
-        denominator += 4;
+    for (i = 1; i <= n; i++) {
+        term = (float)(2 * i) / (4 * i - 1);
+        sum += term;
     }
 
     printf("Approximate sum: %.2f\n", sum);
